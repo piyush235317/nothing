@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int Rotate(int *, int *, int * );
+
+int main(int argc, char const *argv[]){
+
+    int a, b, c;
+    printf("Enter any of three numbers\n");
+    scanf("%d %d %d", &a, &b, &c);
+    Rotate(&a,&b,&c);
+    printf("%d %d %d /n", a, b, c);
+    return 0;
+}
+
+int Rotate(int *x, int *y, int *z){
+
+    int temp;
+    
+    temp = *x;
+    *x = *y;
+    *y = *z;
+    *z = temp;
+}
